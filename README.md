@@ -8,7 +8,8 @@ A Python-based computer vision tool that detects spinal curvature (Scoliosis) fr
 
 ```bash
 # Windows
-#
+python -m venv .venv
+.\.venv\Scripts\activate
 
 # Mac/Linux
 python3 -m venv .venv
