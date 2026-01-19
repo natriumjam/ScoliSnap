@@ -19,7 +19,7 @@ st.markdown('1. Take a photo of your back (without clothes on)')
 st.markdown('2. Make sure you photo only consist of your upper-body (shoulder to waist)')
 st.markdown('3. It is recommended to have a good contrast solid background')
 st.markdown('photo example:')
-image_example_path = 'datasets/No/Person 16.png'
+image_example_path = 'example_image.png'
 st.image(image_example_path)
 
 file = st.file_uploader("Upload yout photo here.", type=["jpg", "png", "jpeg"])
@@ -102,7 +102,7 @@ def detect_spine_curve(image_path):
             plt.imshow(images[i], cmap='gray')
         plt.title(titles[i])
         plt.axis('off')
-    plt.show()
+    st.pyplot(plt)
 
 def analyze_scoliosis_silhouette(image_path):
     img = cv2.imread(image_path)
